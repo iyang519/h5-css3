@@ -1,5 +1,6 @@
 ##响应式web设计
 1.问题的提出：手机浏览器会将一个标准网页缩小至与设备可视区恰好匹配，然后用户在自己感兴趣的内容区域放大浏览。为了看清楚内容，需要不停放大缩小页面，还可以不小心点到了链接
+
 2.H5化繁为简
 * 标准的HTML4.01网页文档类型声明如下
 > <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
@@ -19,15 +20,17 @@ H5为
 5.媒体查询语法，语法很多，列举较常用的。
 * css样式表中使用媒体查询
 <p><code>
-@media screen and (max-width: 960px){
-	
-}
+@media screen and (max-width: 960px){}
 </code></p>
+
 * 样式表，询问是否为一块纵向放置的显示屏，进而加载portrait-screen.css
+
 <p><code>
 	<link rel="stylesheet" media="screen and (orientation : portrait)" href="portrait-screen.css"/>
 </code></p>
+
 非纵向放置的屏幕
+
 <p><code>
 	<link rel="stylesheet" media="not screen and (orientation : portrait)" href="portrait-screen.css"/>
 </code></p>
@@ -41,21 +44,28 @@ H5为
 * 建议在已有的样式表加入媒体查询，而不是使用@import url("...") screen and ....;因为在ie8以及低版本不支持@import，增加了http请求数量。
 
 6.meta标签可以设置具体的宽度或缩放比例
+
 * <p><code>
 	<meta name="viewport" content="initial-scale=1.0,width=device-width"/>
 </code></p>
+
 *  设置缩放范围
+
 <p><code>
 	<meta name="viewport" content="initial-scale=1.0,maximum-scale=3.0,minimum-scale=0.5,width=device-width"/>
 </code></p>
+
 * 禁止缩放
+
  <p><code>
 	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width"/>
 </code></p>
 
 
+7.流式布局，基于百分比布局创建流动弹性布局，使用媒体查询来限制元素变动范围，组合构建响应式设计核心。
+* 固定元素宽度/上下文元素宽度=百分比宽度。
+注意：除后的小数点不要四舍五入，这样可以提供更加精确的结果。
 
-7.流式布局
 
 
 
