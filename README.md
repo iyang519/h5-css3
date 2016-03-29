@@ -11,7 +11,7 @@ H5为
 > <script src="js/jquery.js" type="text/javascript"></script>
 
 H5为
-<span><script src="js/jquery.jss"></script></span>
+[<script src="js/jquery.jss"></script>]
 
 3.H5语义化
 搜索引擎可以更好理解我们的网页，并评定里面的内容。
